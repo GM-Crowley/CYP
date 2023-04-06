@@ -37,7 +37,7 @@ suppressPackageStartupMessages({
 #    Import and set up rasters
 ###############################################################################
 
-# load vegetation  maps of ARTEMIS ANTBED NATURE REFUGE (AANR)
+# load vegetation maps of ARTEMIS ANTBED NATURE REFUGE (AANR)
 load("Veg.RData")
 
 # import rasters from TERN repository 
