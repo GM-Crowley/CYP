@@ -10,7 +10,7 @@ The files are in two sets.
 These files use generalized additive modelling (GAM) to characterise changes in the occurrence of Early Dry Season and Late Dry Season fires, and changes in Autumn Persistent Green (APG) values across Cape York Peninsula, Australia, between 2001 and 2018, and identify potential drivers of change in APG.
 
 (2) The "Stem density change.R" file is for running with files stored in "Veg.RData" and "WP.RData".
-These files analyse changes in stem density (2001 and 2021) and APG (2001-2018) in Artemis Antbed Nature Refuge on east-central Cape York Peninsula. They produce variograms for characterising changes in APG between 2001 and 2018, and a two-sample sign test to compare stem density in 2001 and 2021.
+These files analyse changes in stem density (2001 and 2021) and APG (2001-2018) in Artemis Antbed Nature Refuge on east-central Cape York Peninsula. They produce variograms for characterising changes in APG between 2001 and 2018, and use two-sample sign tests to compare stem density in 2001 and 2021.
 
 Autumn Persistent Green is a measure of foliage projective cover produced by the Joint Remote Sensing Project and is available at https://portal.tern.org.au/metadata/TERN%2Fdd359b61-3ce2-4cd5-bc63-d54d2d0e2509.
 
