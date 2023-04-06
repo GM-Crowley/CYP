@@ -6,7 +6,7 @@ All files have been prepared using R version 4.1.3, RStudio version 2022.02.0 Bu
 
 The files are in two sets.
 
-(1) The "Fire and PG analysis.R" file is for running with "CYP.csv"
+(1) The "Fire and PG analysis.R" file is for running with "CYP.RData"
 These files use generalized additive modelling (GAM) to characterise changes in the occurrence of Early Dry Season and Late Dry Season fires, and changes in Autumn Persistent Green (APG) values across Cape York Peninsula, Australia, between 2001 and 2018, and identify potential drivers of change in APG.
 
 (2) The "Stem density change.R" file is for running with files stored in "Veg.RData" and "WP.RData".
