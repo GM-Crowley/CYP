@@ -26,8 +26,13 @@ suppressPackageStartupMessages({
 #                     Set up and create data table
 ###############################################################################
 # setwd("~/R")
-# download the files "CYP.csv" from 
-# https://github.com/Gay-MC/Veg_Change_CYP  to your working directory 
+# download the files "Veg.RData" and "WP.RData" from 
+# https://github.com/GM-Crowley/Veg_Change_CYP to your working directory 
+
+# create a folder called "output" within your working directory to store figures
+# and tables
+
+# clear list and increase memory
 
 load("CYP.RData")
 
@@ -68,7 +73,7 @@ CYP.PG.change.summary <- rbind(CYP.PG.change.summary, temp)
 rm(temp, CYP_wide)
 
 CYP.PG.change.summary
-write.csv(CYP.PG.change.summary, "CYP.PG.change.summary.csv")
+write.csv(CYP.PG.change.summary, "./output/CYP.PG.change.summary.csv")
 rm(CYP.PG.change.summary)
 
 CYP.burn.freq <- as.data.frame(with(CYP, table(year, Burnt.LY)))
@@ -100,7 +105,7 @@ colnames(CYP.burn.freq.summary)[1] <- "year"
 CYP.burn.freq <- rbind(CYP.burn.freq.wide, CYP.burn.freq.summary)
 
 CYP.burn.freq
-write.csv(CYP.burn.freq, "CYP.burn.freq.csv")
+write.csv(CYP.burn.freq, "./output/CYP.burn.freq.csv")
 rm(CYP.burn.freq.summary, CYP.burn.freq, CYP.burn.freq.wide, a)
 
 ###############################################################################
@@ -177,7 +182,7 @@ anova(EBurn.bam.RA1, EBurn.bam.RA1.noloc, test = "Chisq")
 # EBurn.bam.RA1 is the best-fit model because it has the lowest residual deviance
 
 # save summary statistics of best-fit model
-sink("EDS_bestfit_model.txt")
+sink("./output/EDS_bestfit_model.txt")
 summary(EBurn.bam.RA1)
 sink()
 
@@ -198,7 +203,7 @@ anova(EBurn.bam.RA1, EBurn3k.bam.RA1, test = "Chisq")
 # EBurn.bam.RA1 is the best-fit model because it has the lowest residual deviance
 
 # save summary statistics of 3-knot model
-sink("EDS_3kmodel.txt")
+sink("./output/EDS_3kmodel.txt")
 summary(EBurn3k.bam.RA1)
 sink()
 
@@ -336,7 +341,7 @@ anova(LBurn.bam.RA3, LBurn.bam.RA3.noloc, test = "Chisq")
 # LBurn.bam.RA3 is the best-fit model because it has the lowest residual deviance
 
 # save summary statistics of best-fit model
-sink("LDS_bestfit_model.txt")
+sink("./output/LDS_bestfit_model.txt")
 summary(LBurn.bam.RA3)
 sink()
 
@@ -358,7 +363,7 @@ anova(LBurn.bam.RA3, LBurn3k.bam.RA3, test = "Chisq")
 # LBurn.bam.RA3 is the best-fit model because it has the lowest residual deviance
 
 # save summary statistics of 3-knot model
-sink("LDS_3kmodel.txt")
+sink("./output/LDS_3kmodel.txt")
 summary(LBurn3k.bam.RA3)
 sink()
 
@@ -416,7 +421,7 @@ Fire <- ggpubr::ggarrange(PlotEDS, PlotLDS, ncol = 1,
           font.label = list(size = 14, color = "black", 
                             face = "italic", family = NULL))
 
-ggsave("Plot_Fire_trends.tiff",
+ggsave("./output/Plot_Fire_trends.tiff",
        Fire, width = 36.4, height = 24.3, units = "cm", dpi = 499)
 
 # clean up
@@ -558,7 +563,7 @@ anova(PG.bam.RA3, PG.bam.RA3.noloc, test = "Chisq")
 # PG.bam.RA3 is the best-fit model because it has the lowest residual deviance
 
 # save summary statistics of best-fit model
-sink("PG_bestfit_model.txt")
+sink("./output/PG_bestfit_model.txt")
 summary(PG.bam.RA3)
 sink()
 
@@ -612,7 +617,7 @@ PG <- ggpubr::ggarrange(PlotPGtrend, PlotPGyear, ncol = 1, nrow = 2,
     labels=c("(a)", "(b)"), font.label = list(size = 14, color = "black",
                                               face = "italic", family = NULL))
 
-ggsave("Plot_PG_Trend.tiff", 
+ggsave("./output/Plot_PG_Trend.tiff", 
        PG, width = 17.6, height = 30, units = "cm", dpi = 499)
 
 #clean up
@@ -711,7 +716,7 @@ Management <- ggpubr::ggarrange(Fire, Graz, ncol = 1, nrow = 2,
       labels=c("(a)", "(b)"), font.label = list(size = 14, color = "black", 
                                                 face = "italic", family = NULL))
 
-ggsave("Plot_PG_Management.tiff",
+ggsave("./output/Plot_PG_Management.tiff",
        Management, width = 17.6, height = 30, units = "cm", dpi = 499)
 
 # clean up
