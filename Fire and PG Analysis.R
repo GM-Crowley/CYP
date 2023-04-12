@@ -26,13 +26,11 @@ suppressPackageStartupMessages({
 #                     Set up and create data table
 ###############################################################################
 # setwd("~/R")
-# download the files "Veg.RData" and "WP.RData" from 
+# download the file "CYP.RData" from 
 # https://github.com/GM-Crowley/Veg_Change_CYP to your working directory 
 
 # create a folder called "output" within your working directory to store figures
 # and tables
-
-# clear list and increase memory
 
 load("CYP.RData")
 
