@@ -6,12 +6,18 @@
 #  on Cape York Peninsula
 ###############################################################################
 
+###############################################################################
+#                 LOAD PACKAGES and SET UP DIRECTORY                          #
+###############################################################################
+# setwd("~/R")
+# download the file "CYP.RData" from 
+# https://github.com/GM-Crowley/CYP to your working directory 
+
+# create a folder called "output" within your working directory to store figures
+# and tables
+
 # clear list
 rm(list = ls())
-
-###############################################################################
-#  install packages: dplyr, ggplot2, ggpubr, mgcv, tidyr, visreg
-###############################################################################
 
 suppressPackageStartupMessages({
   library(dplyr)
@@ -23,14 +29,8 @@ suppressPackageStartupMessages({
 })
 
 ###############################################################################
-#                     Set up and create data table
+#                     Load and format data table
 ###############################################################################
-# setwd("~/R")
-# download the file "CYP.RData" from 
-# https://github.com/GM-Crowley/Veg_Change_CYP to your working directory 
-
-# create a folder called "output" within your working directory to store figures
-# and tables
 
 load("CYP.RData")
 
@@ -45,7 +45,7 @@ summary(CYP)
 rm(cols)
 
 ###############################################################################
-#  Produce summary statistics for historical file
+#               Produce summary statistics for historical file
 ###############################################################################
 
 temp <- subset(CYP, select = c("cells", "year", "Vname", "PG"))
@@ -107,7 +107,7 @@ write.csv(CYP.burn.freq, "./output/CYP.burn.freq.csv")
 rm(CYP.burn.freq.summary, CYP.burn.freq, CYP.burn.freq.wide, a)
 
 ###############################################################################
-# Characterise Early Dry Season Fire occurrence
+#             Characterise Early Dry Season Fire occurrence
 ###############################################################################
 
 # run Generalized Additive Models to examine year effect on EDS fire occurrence 
@@ -431,7 +431,7 @@ rm(yaxislab, yaxislab1, yaxislab2, yaxislab3)
 invisible(gc())
 
 ################################################################################
-#                          Persistent Green
+#                      Analyse Autumn Persistent Green
 ################################################################################
 
 # run Generalized Additive Model to identify changes in Persistent Green that 
