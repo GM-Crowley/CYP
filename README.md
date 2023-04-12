@@ -1,6 +1,6 @@
 # Foliage and stem density analysis, Cape York Peninsula, Australia
 R code for the Crowley and Murphy article called 
-_"Differentiating increase in projective foliage cover from vegetation structural change, and identifying its drivers: Insights from an Australian tropical savanna"_  
+_"Carbon-dioxide driven increase in projective foliage cover is not the same as elevated carbon sequestration: Lessons from an Australian tropical savanna"_  
 
 All files have been prepared using R version 4.1.3, RStudio version 2022.02.0 Build 443 and mgcv version 1.8-40. Slightly different results may be obtained if the code is run using a different mgcv version.
 
