@@ -11,7 +11,7 @@
 ###############################################################################
 # setwd("~/R")
 # download the files "Veg.RData" and "WP.RData" from 
-# https://github.com/GM_Crowley/CYP to your working directory 
+# https://github.com/GM-Crowley/CYP to your working directory 
 
 # create a folder called "output" within your working directory to store figures
 # and tables
