@@ -1,6 +1,6 @@
 # Foliage and stem density analysis, Cape York Peninsula, Australia
-R code for the Crowley and Murphy article called 
-_"Carbon-dioxide driven increase in projective foliage cover is not the same as elevated carbon sequestration: Lessons from an Australian tropical savanna"_  
+R code for 
+Crowley and Murphy (in press) Carbon-dioxide-driven increase in projective foliage cover is not the same as elevated carbon sequestration: Lessons from an Australian tropical savanna. _The Rangelands Journal_  
 
 All files have been prepared using R version 4.1.3, RStudio version 2022.02.0 Build 443 and mgcv version 1.8-40. Slightly different results may be obtained if the code is run using a different mgcv version.
 
